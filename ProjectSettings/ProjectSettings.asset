@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 969fb8bc9534b2648bbb1b001e011603
+  productGUID: baf74f94b27ef9346bc7b667e0ea47e9
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: GP_Magnet
+  productName: ai_midterm
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -630,14 +630,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: GP_Magnet
+  metroPackageName: ai_midterm
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: GP_Magnet
+  metroApplicationDescription: ai_midterm
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -706,10 +706,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: c643c246-56b8-4c87-8dc5-aeae8cec74b5
+  cloudProjectId: 56a3b361-1751-4ea4-8071-9385c0b0752f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GP_Magnet
+  projectName: ai_midterm
   organizationId: jia-chau
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
