@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -10,11 +11,13 @@ public class PlayerRespawn : MonoBehaviour
 
     private Rigidbody2D rb;
     private PlayerMagnetMovement magnetMovement; // Reference to the magnet script
+    private TrailRenderer trailRenderer; // Reference to Trail Renderer
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         magnetMovement = GetComponent<PlayerMagnetMovement>();
+        trailRenderer = GetComponent<TrailRenderer>();
 
         lastCheckpointPosition = transform.position; // Set starting position as checkpoint
     }
@@ -38,10 +41,26 @@ public class PlayerRespawn : MonoBehaviour
             magnetMovement.DetachFromMagnet(); // Properly detach before respawning
         }
 
+        StartCoroutine(DisableTrailTemporarily()); // Ensure trail doesn't stretch across respawn
+
         transform.position = lastCheckpointPosition; // Move to last checkpoint
         rb.velocity = Vector2.zero; // Reset movement to prevent drifting
 
         Debug.Log("Player Respawned at: " + lastCheckpointPosition);
+    }
+
+    /// <summary>
+    /// Briefly disables the trail renderer to prevent stretching after respawn.
+    /// </summary>
+    private IEnumerator DisableTrailTemporarily()
+    {
+        if (trailRenderer != null)
+        {
+            trailRenderer.emitting = false; // Stop trail immediately
+            yield return new WaitForSeconds(0.2f); // Small delay
+            trailRenderer.Clear(); // Clear old trail
+            trailRenderer.emitting = true; // Re-enable trail
+        }
     }
 
     /// <summary>
